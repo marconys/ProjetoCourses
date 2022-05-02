@@ -14,7 +14,7 @@ namespace ProjetoCourses
         public int codigo { get; set; }
         public string nome { get; set; }
         public string categoria { get; set; }
-        public int cargaHoraria { get; set; }
+        public int cargahoraria { get; set; }
         public double valor { get; set; }
         public bool ativo { get; set; }
 
@@ -32,7 +32,7 @@ namespace ProjetoCourses
             this.codigo = codigo;
             this.nome = nome;
             this.categoria = categoria;
-            this.cargaHoraria = cargaHoraria;
+            this.cargahoraria = cargaHoraria;
             this.valor = valor;
             this.ativo = ativo;
         }
@@ -43,7 +43,7 @@ namespace ProjetoCourses
 
             this.nome = nome;
             this.categoria = categoria;
-            this.cargaHoraria = cargaHoraria;
+            this.cargahoraria = cargaHoraria;
             this.valor = valor;
 
         }
@@ -61,7 +61,7 @@ namespace ProjetoCourses
 
             cmd.Parameters.AddWithValue("_crs_nome", nome);
             cmd.Parameters.AddWithValue("_crs_categoria", categoria);
-            cmd.Parameters.AddWithValue("_crc_carga_horaria", cargaHoraria);
+            cmd.Parameters.AddWithValue("_crc_carga_horaria", cargahoraria);
             cmd.Parameters.AddWithValue("_crc_valor", valor);
             cmd.Parameters.AddWithValue("_crc_ativo", ativo);
             codigo = Convert.ToInt32(cmd.ExecuteScalar());
@@ -71,14 +71,14 @@ namespace ProjetoCourses
 
         public static List<Cursos> Listar()
         {
-            List<Cursos> produtos = new List<Cursos>();
+            List<Cursos> cursos = new List<Cursos>();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "select * from tb_cursos order by crs_codigo";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                produtos.Add(new Cursos(
+                cursos.Add(new Cursos(
                   Convert.ToInt32(dr.GetInt32(0)),
                     dr.GetString(1),
                     dr.GetString(2),
@@ -87,7 +87,7 @@ namespace ProjetoCourses
                     dr.GetBoolean(5)
                     ));
             }
-            return produtos;
+            return cursos;
         }
 
         public bool alterar(int _crs_codigo, string _crs_nome, string _crc_valor, int _crc_carga_horaria)
@@ -125,7 +125,7 @@ namespace ProjetoCourses
             List<Cursos> cursos = new List<Cursos>();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from usuarios order by nome";
+            cmd.CommandText = "select * from tb_cursos order by crs_codigo";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
