@@ -46,12 +46,6 @@
             this.btnExcluirCurso = new System.Windows.Forms.Button();
             this.btnListarCusrsos = new System.Windows.Forms.Button();
             this.btnInserirCurso = new System.Windows.Forms.Button();
-            this.Columcodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCarga_Horaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Columnstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,6 +83,7 @@
             this.textBuscaporNomeDoCurso.Name = "textBuscaporNomeDoCurso";
             this.textBuscaporNomeDoCurso.Size = new System.Drawing.Size(638, 20);
             this.textBuscaporNomeDoCurso.TabIndex = 4;
+            this.textBuscaporNomeDoCurso.TextChanged += new System.EventHandler(this.textBuscaporNomeDoCurso_TextChanged);
             // 
             // textvalorDoCurso
             // 
@@ -154,13 +149,6 @@
             // dgvCursos
             // 
             this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Columcodigo,
-            this.ColumnNome,
-            this.ColumnCategoria,
-            this.ColumnCarga_Horaria,
-            this.ColumnValor,
-            this.Columnstatus});
             this.dgvCursos.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvCursos.Location = new System.Drawing.Point(0, 228);
             this.dgvCursos.Name = "dgvCursos";
@@ -195,6 +183,7 @@
             this.btnExcluirCurso.TabIndex = 16;
             this.btnExcluirCurso.Text = "Excluir";
             this.btnExcluirCurso.UseVisualStyleBackColor = true;
+            this.btnExcluirCurso.Click += new System.EventHandler(this.btnExcluirCurso_Click);
             // 
             // btnListarCusrsos
             // 
@@ -215,36 +204,6 @@
             this.btnInserirCurso.Text = "Inserir";
             this.btnInserirCurso.UseVisualStyleBackColor = true;
             this.btnInserirCurso.Click += new System.EventHandler(this.btnInserirCurso_Click);
-            // 
-            // Columcodigo
-            // 
-            this.Columcodigo.HeaderText = "Codigo";
-            this.Columcodigo.Name = "Columcodigo";
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.Name = "ColumnNome";
-            // 
-            // ColumnCategoria
-            // 
-            this.ColumnCategoria.HeaderText = "Categoria";
-            this.ColumnCategoria.Name = "ColumnCategoria";
-            // 
-            // ColumnCarga_Horaria
-            // 
-            this.ColumnCarga_Horaria.HeaderText = "Carga_Horaria";
-            this.ColumnCarga_Horaria.Name = "ColumnCarga_Horaria";
-            // 
-            // ColumnValor
-            // 
-            this.ColumnValor.HeaderText = "Valor";
-            this.ColumnValor.Name = "ColumnValor";
-            // 
-            // Columnstatus
-            // 
-            this.Columnstatus.HeaderText = "Status";
-            this.Columnstatus.Name = "Columnstatus";
             // 
             // Form1
             // 
@@ -298,12 +257,6 @@
         private System.Windows.Forms.Button btnExcluirCurso;
         private System.Windows.Forms.Button btnListarCusrsos;
         private System.Windows.Forms.Button btnInserirCurso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Columcodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCarga_Horaria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnValor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Columnstatus;
     }
 }
 
