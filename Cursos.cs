@@ -114,7 +114,7 @@ namespace ProjetoCourses
             MySqlCommand cmd = Banco.Abrir();
             if (descriParte == null)
             { // lista produtos ativos ordenados alfabéticamente
-                cmd.CommandText = "select * from tb_cursos where crc_ativo = 1 order by 2";
+                cmd.CommandText = "select * from tb_cursos where crs_codigo order by 2";
             }
             else
             { // lista produtos ativos, por parte da descriação e ordenados alfabéticamente
@@ -183,12 +183,22 @@ namespace ProjetoCourses
             return cursos;
         }
 
-        // Método Desativar * testado e funcionando
+        // Método Desativar 
         public static void Desativar(int _crs_codigo)
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "update tb_cursos set crc_ativo = 0 where crs_codigo = " + _crs_codigo;
+            cmd.ExecuteReader();
+            cmd.Connection.Close();
+        }
+
+        // Método Reativar
+        public static void Reativar(int _crs_codigo)
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "update tb_cursos set crc_ativo = 1 where crs_codigo = " + _crs_codigo;
             cmd.ExecuteReader();
             cmd.Connection.Close();
         }

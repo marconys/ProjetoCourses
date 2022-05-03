@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textCodigoDoCurso = new System.Windows.Forms.TextBox();
             this.textNomedoCurso = new System.Windows.Forms.TextBox();
             this.textcategoriaDoCurso = new System.Windows.Forms.TextBox();
@@ -46,6 +47,8 @@
             this.btnExcluirCurso = new System.Windows.Forms.Button();
             this.btnListarCusrsos = new System.Windows.Forms.Button();
             this.btnInserirCurso = new System.Windows.Forms.Button();
+            this.btndesativarCurso = new System.Windows.Forms.Button();
+            this.btn_reativarCurso = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +90,7 @@
             // 
             // textvalorDoCurso
             // 
+            this.textvalorDoCurso.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textvalorDoCurso.Location = new System.Drawing.Point(178, 115);
             this.textvalorDoCurso.Name = "textvalorDoCurso";
             this.textvalorDoCurso.Size = new System.Drawing.Size(100, 20);
@@ -140,6 +144,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Location = new System.Drawing.Point(129, 118);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
@@ -148,18 +153,21 @@
             // 
             // dgvCursos
             // 
+            this.dgvCursos.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCursos.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvCursos.Location = new System.Drawing.Point(0, 228);
+            this.dgvCursos.Location = new System.Drawing.Point(0, 231);
             this.dgvCursos.Name = "dgvCursos";
-            this.dgvCursos.Size = new System.Drawing.Size(638, 222);
+            this.dgvCursos.Size = new System.Drawing.Size(638, 219);
             this.dgvCursos.TabIndex = 12;
             // 
             // btnConsultarcursoPorId
             // 
-            this.btnConsultarcursoPorId.Location = new System.Drawing.Point(140, 150);
+            this.btnConsultarcursoPorId.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarcursoPorId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarcursoPorId.Location = new System.Drawing.Point(133, 153);
             this.btnConsultarcursoPorId.Name = "btnConsultarcursoPorId";
-            this.btnConsultarcursoPorId.Size = new System.Drawing.Size(87, 32);
+            this.btnConsultarcursoPorId.Size = new System.Drawing.Size(69, 32);
             this.btnConsultarcursoPorId.TabIndex = 14;
             this.btnConsultarcursoPorId.Text = "Consultar";
             this.btnConsultarcursoPorId.UseVisualStyleBackColor = true;
@@ -167,9 +175,11 @@
             // 
             // btnAlterarccurso
             // 
-            this.btnAlterarccurso.Location = new System.Drawing.Point(270, 150);
+            this.btnAlterarccurso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterarccurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterarccurso.Location = new System.Drawing.Point(208, 153);
             this.btnAlterarccurso.Name = "btnAlterarccurso";
-            this.btnAlterarccurso.Size = new System.Drawing.Size(87, 32);
+            this.btnAlterarccurso.Size = new System.Drawing.Size(70, 32);
             this.btnAlterarccurso.TabIndex = 15;
             this.btnAlterarccurso.Text = "Alterar";
             this.btnAlterarccurso.UseVisualStyleBackColor = true;
@@ -177,9 +187,11 @@
             // 
             // btnExcluirCurso
             // 
-            this.btnExcluirCurso.Location = new System.Drawing.Point(399, 150);
+            this.btnExcluirCurso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluirCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirCurso.Location = new System.Drawing.Point(284, 153);
             this.btnExcluirCurso.Name = "btnExcluirCurso";
-            this.btnExcluirCurso.Size = new System.Drawing.Size(87, 32);
+            this.btnExcluirCurso.Size = new System.Drawing.Size(70, 32);
             this.btnExcluirCurso.TabIndex = 16;
             this.btnExcluirCurso.Text = "Excluir";
             this.btnExcluirCurso.UseVisualStyleBackColor = true;
@@ -187,9 +199,11 @@
             // 
             // btnListarCusrsos
             // 
-            this.btnListarCusrsos.Location = new System.Drawing.Point(527, 150);
+            this.btnListarCusrsos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListarCusrsos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarCusrsos.Location = new System.Drawing.Point(512, 153);
             this.btnListarCusrsos.Name = "btnListarCusrsos";
-            this.btnListarCusrsos.Size = new System.Drawing.Size(87, 32);
+            this.btnListarCusrsos.Size = new System.Drawing.Size(70, 32);
             this.btnListarCusrsos.TabIndex = 17;
             this.btnListarCusrsos.Text = "Listar";
             this.btnListarCusrsos.UseVisualStyleBackColor = true;
@@ -197,19 +211,49 @@
             // 
             // btnInserirCurso
             // 
-            this.btnInserirCurso.Location = new System.Drawing.Point(15, 150);
+            this.btnInserirCurso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInserirCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserirCurso.Location = new System.Drawing.Point(58, 153);
             this.btnInserirCurso.Name = "btnInserirCurso";
-            this.btnInserirCurso.Size = new System.Drawing.Size(87, 32);
+            this.btnInserirCurso.Size = new System.Drawing.Size(69, 32);
             this.btnInserirCurso.TabIndex = 18;
             this.btnInserirCurso.Text = "Inserir";
             this.btnInserirCurso.UseVisualStyleBackColor = true;
             this.btnInserirCurso.Click += new System.EventHandler(this.btnInserirCurso_Click);
             // 
+            // btndesativarCurso
+            // 
+            this.btndesativarCurso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btndesativarCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndesativarCurso.Location = new System.Drawing.Point(360, 153);
+            this.btndesativarCurso.Name = "btndesativarCurso";
+            this.btndesativarCurso.Size = new System.Drawing.Size(70, 32);
+            this.btndesativarCurso.TabIndex = 19;
+            this.btndesativarCurso.Text = "Desativar";
+            this.btndesativarCurso.UseVisualStyleBackColor = true;
+            this.btndesativarCurso.Click += new System.EventHandler(this.btndesativarCurso_Click);
+            // 
+            // btn_reativarCurso
+            // 
+            this.btn_reativarCurso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_reativarCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reativarCurso.Location = new System.Drawing.Point(436, 153);
+            this.btn_reativarCurso.Name = "btn_reativarCurso";
+            this.btn_reativarCurso.Size = new System.Drawing.Size(70, 32);
+            this.btn_reativarCurso.TabIndex = 20;
+            this.btn_reativarCurso.Text = "Reativar";
+            this.btn_reativarCurso.UseVisualStyleBackColor = true;
+            this.btn_reativarCurso.Click += new System.EventHandler(this.btn_reativarCurso_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(638, 450);
+            this.Controls.Add(this.btn_reativarCurso);
+            this.Controls.Add(this.btndesativarCurso);
             this.Controls.Add(this.btnInserirCurso);
             this.Controls.Add(this.btnListarCusrsos);
             this.Controls.Add(this.btnExcluirCurso);
@@ -228,7 +272,10 @@
             this.Controls.Add(this.textcategoriaDoCurso);
             this.Controls.Add(this.textNomedoCurso);
             this.Controls.Add(this.textCodigoDoCurso);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Curso";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
@@ -257,6 +304,8 @@
         private System.Windows.Forms.Button btnExcluirCurso;
         private System.Windows.Forms.Button btnListarCusrsos;
         private System.Windows.Forms.Button btnInserirCurso;
+        private System.Windows.Forms.Button btndesativarCurso;
+        private System.Windows.Forms.Button btn_reativarCurso;
     }
 }
 

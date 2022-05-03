@@ -91,6 +91,10 @@ namespace ProjetoCourses
 
 
             }
+            else
+            {
+                MessageBox.Show("O Código Digitado Não Existe!");
+            }
         }
         // Chama o método Listar todos
         private void btnListarCusrsos_Click(object sender, EventArgs e)
@@ -163,5 +167,42 @@ namespace ProjetoCourses
                 dgvCursos.DataSource = lista;
             }
         }
+
+        // Chama o método Desativar curso
+        private void btndesativarCurso_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                Cursos cursos = new Cursos();
+                Cursos.Desativar(int.Parse(textCodigoDoCurso.Text));
+
+                MessageBox.Show("Curso Desativado com Sucesso!");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Falha na Desativação do Curso!");
+            }
+        }
+
+        // Chama o método Reativar curso
+        private void btn_reativarCurso_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                Cursos cursos = new Cursos();
+                Cursos.Reativar(int.Parse(textCodigoDoCurso.Text));
+
+                MessageBox.Show("Curso Reativado com Sucesso!");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Falha na Reativação do Curso!");
+            }
+        }
     }
+    
 }
