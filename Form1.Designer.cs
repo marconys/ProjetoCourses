@@ -49,7 +49,16 @@
             this.btnInserirCurso = new System.Windows.Forms.Button();
             this.btndesativarCurso = new System.Windows.Forms.Button();
             this.btn_reativarCurso = new System.Windows.Forms.Button();
+            this.btn_status = new System.Windows.Forms.Button();
+            this.dgv_disponivel = new System.Windows.Forms.DataGridView();
+            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCarga_Horaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_disponivel)).BeginInit();
             this.SuspendLayout();
             // 
             // textCodigoDoCurso
@@ -245,6 +254,63 @@
             this.btn_reativarCurso.UseVisualStyleBackColor = true;
             this.btn_reativarCurso.Click += new System.EventHandler(this.btn_reativarCurso_Click);
             // 
+            // btn_status
+            // 
+            this.btn_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_status.Location = new System.Drawing.Point(12, 11);
+            this.btn_status.Name = "btn_status";
+            this.btn_status.Size = new System.Drawing.Size(70, 32);
+            this.btn_status.TabIndex = 21;
+            this.btn_status.Text = "Status";
+            this.btn_status.UseVisualStyleBackColor = true;
+            this.btn_status.Click += new System.EventHandler(this.btn_status_Click);
+            // 
+            // dgv_disponivel
+            // 
+            this.dgv_disponivel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_disponivel.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnID,
+            this.ColumnNome,
+            this.ColumnCategoria,
+            this.ColumnCarga_Horaria,
+            this.ColumnValor,
+            this.ColumnStatus});
+            this.dgv_disponivel.Location = new System.Drawing.Point(0, 231);
+            this.dgv_disponivel.Name = "dgv_disponivel";
+            this.dgv_disponivel.Size = new System.Drawing.Size(638, 219);
+            this.dgv_disponivel.TabIndex = 22;
+            this.dgv_disponivel.Visible = false;
+            // 
+            // ColumnID
+            // 
+            this.ColumnID.HeaderText = "Código";
+            this.ColumnID.Name = "ColumnID";
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            // 
+            // ColumnCategoria
+            // 
+            this.ColumnCategoria.HeaderText = "Categoria";
+            this.ColumnCategoria.Name = "ColumnCategoria";
+            // 
+            // ColumnCarga_Horaria
+            // 
+            this.ColumnCarga_Horaria.HeaderText = "Carga Horária";
+            this.ColumnCarga_Horaria.Name = "ColumnCarga_Horaria";
+            // 
+            // ColumnValor
+            // 
+            this.ColumnValor.HeaderText = "Valor";
+            this.ColumnValor.Name = "ColumnValor";
+            // 
+            // ColumnStatus
+            // 
+            this.ColumnStatus.HeaderText = "Status";
+            this.ColumnStatus.Name = "ColumnStatus";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,6 +318,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(638, 450);
+            this.Controls.Add(this.dgv_disponivel);
+            this.Controls.Add(this.btn_status);
             this.Controls.Add(this.btn_reativarCurso);
             this.Controls.Add(this.btndesativarCurso);
             this.Controls.Add(this.btnInserirCurso);
@@ -279,6 +347,7 @@
             this.Text = "Cadastro Curso";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_disponivel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,6 +375,14 @@
         private System.Windows.Forms.Button btnInserirCurso;
         private System.Windows.Forms.Button btndesativarCurso;
         private System.Windows.Forms.Button btn_reativarCurso;
+        private System.Windows.Forms.Button btn_status;
+        private System.Windows.Forms.DataGridView dgv_disponivel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCarga_Horaria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnStatus;
     }
 }
 

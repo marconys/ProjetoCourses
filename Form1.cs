@@ -98,43 +98,14 @@ namespace ProjetoCourses
         }
         // Chama o método Listar todos
         private void btnListarCusrsos_Click(object sender, EventArgs e)
-        {                        
+        {   
+            dgv_disponivel.Visible = false;
+
             Cursos cursos = new Cursos();
             var lista = Cursos.ListarTodos();
             dgvCursos.DataSource = lista;
 
-
-            //Chama o método listar sendo necessário a inserção de colunas no DataGridVew onde na ultima coluna será mostrado o status do curso listado
             
-            /* dgvCursos.Rows.Clear();
-             List<Cursos> listadecursos = Cursos.Listar();
-             int cont = 0;
-
-             foreach (Cursos cursos in listadecursos)
-             {
-
-
-
-             dgvCursos.Rows.Add();
-             dgvCursos.Rows[cont].Cells[0].Value = cursos.codigo.ToString();
-             dgvCursos.Rows[cont].Cells[1].Value = cursos.nome.ToString();
-             dgvCursos.Rows[cont].Cells[2].Value = cursos.categoria.ToString();
-             dgvCursos.Rows[cont].Cells[3].Value = cursos.cargahoraria.ToString();
-             dgvCursos.Rows[cont].Cells[4].Value = cursos.valor.ToString();
-             dgvCursos.Rows[cont].Cells[5].Value = cursos.ativo; 
-
-             Condição que retorna com o status do curso listado
-            if (cursos.ativo)
-            {
-                dgvCursos.Rows[cont].Cells[5].Value = "Ativo";
-            }
-            else
-            {
-                dgvCursos.Rows[cont].Cells[5].Value = "Inativo";
-            }
-
-             cont ++;
-            } */
         }
         // Chama o método Excluir curso
         private void btnExcluirCurso_Click(object sender, EventArgs e)
@@ -202,6 +173,42 @@ namespace ProjetoCourses
 
                 MessageBox.Show("Falha na Reativação do Curso!");
             }
+        }
+        // Chama o Método listar
+        private void btn_status_Click(object sender, EventArgs e)
+        {
+            //Chama o método listar sendo necessário a inserção de colunas no DataGridVew onde na ultima coluna será mostrado o status do curso listado
+                 dgv_disponivel.Visible = true;
+
+                 dgv_disponivel.Rows.Clear();
+                 List<Cursos> listadecursos = Cursos.Listar();
+                 int cont = 0;
+
+             foreach (Cursos cursos in listadecursos)
+             {
+
+
+
+                dgv_disponivel.Rows.Add();
+                dgv_disponivel.Rows[cont].Cells[0].Value = cursos.codigo.ToString();
+                dgv_disponivel.Rows[cont].Cells[1].Value = cursos.nome.ToString();
+                dgv_disponivel.Rows[cont].Cells[2].Value = cursos.categoria.ToString();
+                dgv_disponivel.Rows[cont].Cells[3].Value = cursos.cargahoraria.ToString();
+                dgv_disponivel.Rows[cont].Cells[4].Value = cursos.valor.ToString();
+                dgv_disponivel.Rows[cont].Cells[5].Value = cursos.ativo; 
+
+            // Condição que retorna com o status do curso listado
+            if (cursos.ativo)
+            {
+                    dgv_disponivel.Rows[cont].Cells[5].Value = " Curso Ativo";
+            }
+            else
+            {
+                    dgv_disponivel.Rows[cont].Cells[5].Value = "Curso Inativo";
+            }
+
+             cont ++;
+            } 
         }
     }
     

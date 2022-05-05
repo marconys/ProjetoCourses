@@ -114,7 +114,7 @@ namespace ProjetoCourses
             MySqlCommand cmd = Banco.Abrir();
             if (descriParte == null)
             { // lista produtos ativos ordenados alfabéticamente
-                cmd.CommandText = "select * from tb_cursos where crs_codigo order by 2";
+                cmd.CommandText = "select * from tb_cursos where crc_ativo = 1 order by 2";
             }
             else
             { // lista produtos ativos, por parte da descriação e ordenados alfabéticamente
